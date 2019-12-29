@@ -9,13 +9,13 @@ entr_warn:
 	@echo "----------------------------------------------------------"
 
 isort:
-	isort `${PY_FILES}`
+	poetry run isort `${PY_FILES}`
 
 black:
-	black `${PY_FILES}` --skip-string-normalization
+	poetry run black `${PY_FILES}` --skip-string-normalization
 
 flake8:
-	flake8 fabric_helpers
+	poetry run flake8 fabric_helpers
 
 watch_flake8:
 	if command -v entr > /dev/null; then ${PY_FILES} | entr -c $(MAKE) flake8; else $(MAKE) flake8 entr_warn; fi
