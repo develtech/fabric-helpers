@@ -5,7 +5,7 @@ import fabric
 import fabtools
 from fabtools import require
 
-import based.deploy.fabtech as fabtech
+from fabric_helpers import fabtools as fabtech
 
 from ..utils import RequiredDictKeysMixin
 from .server import prep_server
