@@ -16,7 +16,7 @@ authors = [
 readme = 'README.rst'
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 fabtools = {git = "https://github.com/develtech/fabtools.git"}
 fabric3 = "^1.14.post1"
 
