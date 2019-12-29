@@ -1,0 +1,16 @@
+session_name: fabric_helpers
+start_directory: ./ # load session relative to config location (project root).
+before_script: poetry install --no-ansi --quiet
+shell_command_before:
+- source $(poetry env list --full-path | head -n 1 2> /dev/null)/bin/activate 2>&1
+windows:
+- window_name: fabric-helpers
+  focus: True
+  layout: main-horizontal
+  options:
+    main-pane-height: 35
+  panes:
+  - focus: True
+  - pane
+  - pane
+  - pane
